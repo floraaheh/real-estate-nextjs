@@ -11,11 +11,9 @@ import { FaBath, FaBed } from 'react-icons/fa';
 import { RiApps2Fill } from 'react-icons/ri';
 import millify from 'millify';
 import parse from 'html-react-parser';
-
 const Detail = ({ propertyDetails }) => {
     console.log(propertyDetails);
     const { photos, title, isVerified, rentFrequency, price, agency, description, amenities, rooms, bath, area, type, furnishingStatus, purpose } = propertyDetails;
-
     return (
         <Box my="2" px="16">
             <Slider {...Settings}>
@@ -25,8 +23,6 @@ const Detail = ({ propertyDetails }) => {
                     </Box>
                 ))}
             </Slider>
-
-
             <Flex mt="8" gap="0 20px" flexDirection="column">
                 <Flex justifyContent="space-between" alignItems="center">
                     <Flex flexDirection="column">
@@ -38,30 +34,17 @@ const Detail = ({ propertyDetails }) => {
                             {rooms} <FaBed /> | {bath} <FaBath /> | {millify(area)} sqft <RiApps2Fill />
                         </Flex>
                     </Flex>
-                    
                 </Flex>
-
                 <Heading fontSize="lg" fontWeight="bold" my="2">{title}</Heading>
             </Flex>
-
-
             <Flex flexDirection="column">
                 <Text my="2" textAlign="justify" lineHeight="2">
                     {parse(description)}
                 </Text>
-
-                
                     </Flex>
-                   
-              
-
-    
-           
         </Box>
-    );
+    ); 
 };
-
-
 export async function getServerSideProps({ params: { id } }) {
     const data = await estateApi(`${baseUrl}/properties/detail?externalID=${id}`);
 
@@ -71,7 +54,4 @@ export async function getServerSideProps({ params: { id } }) {
         },
     };
 }
-
-
-
 export default Detail;
