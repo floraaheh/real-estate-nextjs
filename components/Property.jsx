@@ -21,13 +21,14 @@ const Property = ({ item }) => {
                 <Box mt={1}>
                     <Flex justifyContent="space-between" alignItems="center" >
                         <Flex flex alignItems="center" justifyContent="space-between" gap="0 5px">
-                            <Box paddingRight='3' color='green.400'>{isVerified && <HiBadgeCheck size={24} />}</Box>
-                            <Text fontSize="lg" fontWeight="bold">AED {price}{rentFrequency ? `/${rentFrequency}` : ""}</Text>
+                            {}
+                            <Text fontSize="lg" fontWeight="bold">Rs {price}{rentFrequency ? `` : ""}</Text>
                         </Flex>
-                        <Avatar size="md" name="Agency" src={logo.url} />
+                        {}
                     </Flex>
-                    <Flex alignItems="center" fontSize="16px" color="blue.500" gap="0 15px">
-                        {rooms} <FaBed /> | {bath} <FaBath /> | {millify(area)} sqft <RiApps2Fill />
+                    <Flex alignItems="center" fontSize="16px" color="black.500" gap="0 15px">
+                        {rooms} <FaBed /> 
+                        | {bath} <FaBath /> | {millify(area)} sqft <RiApps2Fill />
                     </Flex>
                     <Box mt={4}>
                         <Text fontSize="lg">{title.length > 40 ? `${title.substring(0, 40)}...` : title}</Text>

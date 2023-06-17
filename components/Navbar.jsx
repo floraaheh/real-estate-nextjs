@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/link-passhref */
+
 import { Box, Flex, Heading, IconButton, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
 import React from 'react';
 import { FcHome } from 'react-icons/fc'
@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className={styles.navbar}>
             <Flex justifyContent="space-between" w="full" py="4" px="2" borderBottom="1px" borderColor="gray.200" position="sticky">
                 <Box fontSize='3xl' color='blue.400' fontWeight='bold'>
-                    <Link href="/">Realtor</Link>
+                    {/* <Link href="/">Realtor</Link> */}
                 </Box>
                 <Menu>
                     <MenuButton
@@ -26,7 +26,7 @@ const Navbar = () => {
                     <MenuList>
                         <Link href="/">
                             <MenuItem icon={<FcHome />} >
-                                Home
+                                {/* Home */}
                             </MenuItem>
                         </Link>
                         <Link href="/" passHref>

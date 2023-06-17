@@ -41,6 +41,7 @@ const SearchFilters = () => {
     }, [searchTerm]);
 
     return (
+        <div>
         <Flex
             flexWrap="wrap"
             justifyContent="center"
@@ -65,6 +66,7 @@ const SearchFilters = () => {
                     )
             }
         </Flex >
+        </div>
     );
 };
 
